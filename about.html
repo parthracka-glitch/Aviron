@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>About AVIRON – Story, Process Roadmap &amp; Governance Charter</title>
+<meta name="description" content="Learn about AVIRON Studio — our startup philosophy, 6-step high-velocity delivery roadmap, client code ownership charter, and technical standards.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- SVG Symbol Sprite -->
+<svg width="0" height="0" style="position:absolute;display:none">
+<defs>
+  <linearGradient id="gd" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#d4a85a"/><stop offset="1" stop-color="#946a24"/></linearGradient>
+</defs>
+<symbol id="arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+<symbol id="shield" viewBox="0 0 24 24"><path d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6z"/><path d="m9 12 2 2 4-4"/></symbol>
+<symbol id="check" viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></symbol>
+<symbol id="clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+<symbol id="chart" viewBox="0 0 24 24"><path d="M3 3v18h18M18 17V9M13 17V5M8 17v-3"/></symbol>
+<symbol id="logo" viewBox="0 0 40 40"><path d="M20 3 3 37h7l10-22 10 22h7z" fill="url(#gd)" stroke="none"/><path d="M14 28h12" stroke="#fcfaf6" stroke-width="2.4"/></symbol>
+</svg>
+
+<!-- Header -->
+<header class="hdr" id="site-header">
+  <div class="w">
+    <a href="index.html" class="logo" aria-label="AVIRON Home">
+      <svg class="i logo-icon"><use href="#logo"/></svg>
+      <span class="logo-text"><b>AVIRON</b></span>
+    </a>
+    
+    <nav class="nav" id="main-nav" aria-label="Main Navigation">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="services.html" class="nav-link">Services</a>
+      <a href="pricing.html" class="nav-link">Pricing</a>
+      <a href="about.html" class="nav-link on">About</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+    </nav>
+
+    <div class="hr">
+      <a href="contact.html" class="btn f sm magnetic">Get a Quote</a>
+      <button class="burger" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span class="burger-bar"></span>
+        <span class="burger-bar"></span>
+        <span class="burger-bar"></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <!-- Page Hero -->
+  <section class="sec" style="padding-bottom:30px">
+    <div class="w">
+      <span class="eb">The AVIRON Philosophy &amp; Architecture</span>
+      <h1 style="font-size:42px;margin:10px 0 14px">Precision Engineering Meets Aesthetic Authority</h1>
+      <p style="max-width:720px;color:var(--mut);line-height:1.6;margin-bottom:28px">
+        AVIRON was founded to break the broken agency model: bloated retainers, hidden hosting markups, and glacial delivery. We operate with startup velocity, mathematical rigor, and 100% true client code ownership.
+      </p>
+
+      <div class="hero-badges">
+        <span class="pill-badge gold"><b>Pune Studio &amp; Global Delivery</b></span>
+        <span class="pill-badge gold"><b>3–14 Day Turnaround</b></span>
+        <span class="pill-badge gold"><b>100% Code Handover</b></span>
+        <span class="pill-badge"><b>Zero Platform Lock-in</b></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 1: The Three Pillars -->
+  <section class="sec beige" style="padding-top:40px">
+    <div class="w">
+      <div class="sec-hdr reveal">
+        <span class="eb">Our Foundation</span>
+        <h2>Mission, Vision &amp; Operating Principles</h2>
+        <p>Built for ambitious businesses who value craftsmanship, transparency, and quantifiable return on investment.</p>
+      </div>
+
+      <div class="about-pillars" style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:28px">
+        <div class="pillar-card card reveal-tilt delay-1" style="padding:28px">
+          <span style="font-family:'JetBrains Mono';font-size:12px;color:var(--g);font-weight:700">01 / OUR MISSION</span>
+          <h3 style="margin:12px 0 10px;font-size:22px">Democratizing Luxury</h3>
+          <p style="font-size:13px;color:var(--mut);line-height:1.6">
+            To provide high-end, bespoke digital engineering and cinematic visual media to growing local businesses and enterprises at fair, transparent, and accessible fixed rates starting at ₹9,000.
+          </p>
+          <div style="margin-top:16px;padding-top:14px;border-top:1px solid #f0eae1;font-size:12px;color:var(--b);font-weight:600">
+            ✓ Fixed Scopes · Zero Surprise Invoices
+          </div>
+        </div>
+
+        <div class="pillar-card card reveal-tilt delay-2" style="padding:28px">
+          <span style="font-family:'JetBrains Mono';font-size:12px;color:var(--g);font-weight:700">02 / OUR VISION</span>
+          <h3 style="margin:12px 0 10px;font-size:22px">Global Digital Footprint</h3>
+          <p style="font-size:13px;color:var(--mut);line-height:1.6">
+            To empower over 1,000 cafes, aesthetic clinics, luxury resorts, and high-growth brands with sub-second website speed, modern 3D interfaces, and frictionless customer acquisition funnels.
+          </p>
+          <div style="margin-top:16px;padding-top:14px;border-top:1px solid #f0eae1;font-size:12px;color:var(--b);font-weight:600">
+            ✓ 95+ PageSpeed Core Web Vitals Standard
+          </div>
+        </div>
+
+        <div class="pillar-card card reveal-tilt delay-3" style="padding:28px">
+          <span style="font-family:'JetBrains Mono';font-size:12px;color:var(--g);font-weight:700">03 / OUR ETHOS</span>
+          <h3 style="margin:12px 0 10px;font-size:22px">True Client Sovereignty</h3>
+          <p style="font-size:13px;color:var(--mut);line-height:1.6">
+            We believe your website is your digital real estate. Unlike agencies who hold code hostage on proprietary platforms, AVIRON transfers 100% full source code, domain, and server rights upon launch.
+          </p>
+          <div style="margin-top:16px;padding-top:14px;border-top:1px solid #f0eae1;font-size:12px;color:var(--b);font-weight:600">
+            ✓ Complete Handover · Full Admin Access
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 2: 6-Step Delivery Roadmap -->
+  <section class="sec" id="process">
+    <div class="w">
+      <div class="sec-hdr" data-reveal>
+        <span class="eb">Predictable &amp; High-Velocity</span>
+        <div class="mask-heading">
+          <h2>The 6-Step Delivery Roadmap</h2>
+        </div>
+        <p>From initial discovery to full live launch in 3 to 14 business days. Transparent milestones with zero guesswork.</p>
+      </div>
+
+      <div class="timeline-track-wrap" style="margin-top:34px">
+        <svg class="service-svg-line-container" viewBox="0 0 1200 480" preserveAspectRatio="none">
+          <path class="service-progress-line" d="M 60,110 C 400,20 800,240 1140,110" />
+        </svg>
+
+        <div class="process-steps" style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px">
+          <div class="card reveal-scale delay-1 active-step-glow" data-reveal style="padding:24px;position:relative">
+            <span style="position:absolute;top:18px;right:20px;font-family:'JetBrains Mono';font-size:18px;color:#d5bc94;font-weight:700">01</span>
+            <span class="eb" style="font-size:10.5px">DAY 1</span>
+            <h4 style="margin:8px 0 10px">Discovery &amp; Strategy Alignment</h4>
+            <p style="font-size:12.5px;color:var(--mut);line-height:1.55">
+              We conduct a 30-minute discovery call to map your business objectives, target customer demographic, branding assets, and essential call-to-actions.
+            </p>
+          </div>
+
+          <div class="card reveal-scale delay-2 active-step-glow" data-reveal style="padding:24px;position:relative">
+            <span style="position:absolute;top:18px;right:20px;font-family:'JetBrains Mono';font-size:18px;color:#d5bc94;font-weight:700">02</span>
+            <span class="eb" style="font-size:10.5px">DAYS 2–3</span>
+            <h4 style="margin:8px 0 10px">Information Architecture &amp; Copy</h4>
+            <p style="font-size:12.5px;color:var(--mut);line-height:1.55">
+              We architect the sitemap, design conversion wireframes, structure sales headlines, and craft patient/client journey flows for mobile screens.
+            </p>
+          </div>
+
+          <div class="card reveal-scale delay-3 active-step-glow" data-reveal style="padding:24px;position:relative">
+            <span style="position:absolute;top:18px;right:20px;font-family:'JetBrains Mono';font-size:18px;color:#d5bc94;font-weight:700">03</span>
+            <span class="eb" style="font-size:10.5px">DAYS 4–6</span>
+            <h4 style="margin:8px 0 10px">High-Fidelity Visual Design</h4>
+            <p style="font-size:12.5px;color:var(--mut);line-height:1.55">
+              Our creative team crafts the luxury visual interface incorporating custom typography, color tokens, 3D interactive accents, and media galleries.
+            </p>
+          </div>
+
+          <div class="card reveal-scale delay-1 active-step-glow" data-reveal style="padding:24px;position:relative">
+            <span style="position:absolute;top:18px;right:20px;font-family:'JetBrains Mono';font-size:18px;color:#d5bc94;font-weight:700">04</span>
+            <span class="eb" style="font-size:10.5px">DAYS 7–10</span>
+            <h4 style="margin:8px 0 10px">Full Code &amp; Speed Optimization</h4>
+            <p style="font-size:12.5px;color:var(--mut);line-height:1.55">
+              Engineers write clean, semantic code with instant WhatsApp hooks, appointment forms, SSL encryption, and aggressive asset minification.
+            </p>
+          </div>
+
+          <div class="card reveal-scale delay-2 active-step-glow" data-reveal style="padding:24px;position:relative">
+            <span style="position:absolute;top:18px;right:20px;font-family:'JetBrains Mono';font-size:18px;color:#d5bc94;font-weight:700">05</span>
+            <span class="eb" style="font-size:10.5px">DAYS 11–12</span>
+            <h4 style="margin:8px 0 10px">SEO, Tracking &amp; Staging Review</h4>
+            <p style="font-size:12.5px;color:var(--mut);line-height:1.55">
+              You receive a private staging link to review your website. We implement Google Analytics, Meta Pixel tracking, and local schema markup.
+            </p>
+          </div>
+
+          <div class="card reveal-scale delay-3 active-step-glow" data-reveal style="padding:24px;position:relative">
+            <span style="position:absolute;top:18px;right:20px;font-family:'JetBrains Mono';font-size:18px;color:#d5bc94;font-weight:700">06</span>
+            <span class="eb" style="font-size:10.5px">DAY 14 / LAUNCH</span>
+            <h4 style="margin:8px 0 10px">Domain Live &amp; Handover Charter</h4>
+            <p style="font-size:12.5px;color:var(--mut);line-height:1.55">
+              DNS switches to your custom domain. Full zip of source code, cPanel/server credentials, and 30 days of complimentary post-launch support begin.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 3: Client Governance & Handover Charter -->
+  <section class="sec beige" id="governance">
+    <div class="w">
+      <div class="sec-hdr" data-reveal>
+        <span class="eb">Zero Agency Trap</span>
+        <div class="mask-heading">
+          <h2>Client Governance &amp; Handover Charter</h2>
+        </div>
+        <p>We believe in building long-term partnerships through excellence, not artificial dependencies.</p>
+      </div>
+
+      <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:24px;margin-top:28px">
+        <div class="card" style="padding:26px">
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px">
+            <svg class="i" style="width:22px;height:22px;color:var(--g)"><use href="#shield"/></svg>
+            <h4 style="margin:0;font-size:18px">100% Code &amp; Asset Handover</h4>
+          </div>
+          <p style="font-size:13px;color:var(--mut);line-height:1.6">
+            Upon final milestone payment, you receive a complete clean archive of all source code (HTML, CSS, JS, assets, images) with zero obfuscation. You are free to host it anywhere, modify it, or hire any developer in the future.
+          </p>
+        </div>
+
+        <div class="card" style="padding:26px">
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px">
+            <svg class="i" style="width:22px;height:22px;color:var(--g)"><use href="#shield"/></svg>
+            <h4 style="margin:0;font-size:18px">Direct Domain &amp; DNS Ownership</h4>
+          </div>
+          <p style="font-size:13px;color:var(--mut);line-height:1.6">
+            Your domain is registered directly in your name or transferred to your preferred registrar (GoDaddy, Namecheap, Cloudflare). You maintain 100% legal ownership of your digital property.
+          </p>
+        </div>
+
+        <div class="card" style="padding:26px">
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px">
+            <svg class="i" style="width:22px;height:22px;color:var(--g)"><use href="#shield"/></svg>
+            <h4 style="margin:0;font-size:18px">No Hidden Retainers or Subscriptions</h4>
+          </div>
+          <p style="font-size:13px;color:var(--mut);line-height:1.6">
+            All our website packages include Year 1 domain and hosting at zero extra charge. You will never receive surprise monthly maintenance bills unless you specifically opt for an ongoing growth retainer.
+          </p>
+        </div>
+
+        <div class="card" style="padding:26px">
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px">
+            <svg class="i" style="width:22px;height:22px;color:var(--g)"><use href="#shield"/></svg>
+            <h4 style="margin:0;font-size:18px">30-Day Post-Launch Warranty</h4>
+          </div>
+          <p style="font-size:13px;color:var(--mut);line-height:1.6">
+            Every project includes 30 days of complimentary technical warranty covering bug fixes, browser updates, speed maintenance, and form troubleshooting so you launch with total peace of mind.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Banner -->
+  <section class="sec" style="text-align:center;padding:70px 20px">
+    <div class="w" style="max-width:700px">
+      <span class="eb">Work With AVIRON</span>
+      <h2 style="font-size:36px;margin:12px 0 16px">Ready to Build Your Brand Flagship?</h2>
+      <p style="color:var(--mut);margin-bottom:28px">Talk with our founder or explore our fixed package options starting at ₹9,000.</p>
+      <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap">
+        <a href="pricing.html" class="btn f magnetic">View Pricing &amp; Packages <svg class="i"><use href="#arrow"/></svg></a>
+        <a href="contact.html" class="btn magnetic">Get a Free Consultation</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- Footer -->
+<footer class="ftr">
+  <div class="w ftr-grid">
+    <div>
+      <div class="logo ftr-logo">
+        <svg class="i logo-icon"><use href="#logo"/></svg>
+        <span class="logo-text"><b>AVIRON</b></span>
+      </div>
+      <p class="ftr-about">High-velocity web development, 3D WebGL experiences, cinema video production, and editorial photo retouching for enterprises in India and worldwide.</p>
+      <div class="ftr-meta">Pune, Maharashtra, India · Serving Globally</div>
+    </div>
+    
+    <div>
+      <h4>Navigation</h4>
+      <ul class="ftr-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services &amp; Solutions</a></li>
+        <li><a href="pricing.html">Packages &amp; Pricing</a></li>
+        <li><a href="about.html">About &amp; Roadmap</a></li>
+        <li><a href="contact.html">Contact &amp; Quote</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h4>Packages</h4>
+      <ul class="ftr-links">
+        <li><a href="pricing.html#card-starter">Starter – ₹9,000</a></li>
+        <li><a href="pricing.html#card-standard">Standard – ₹15,000</a></li>
+        <li><a href="pricing.html#card-advanced">Advanced – ₹30,000</a></li>
+        <li><a href="pricing.html#card-premium">Premium – ₹45,000</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h4>Engineering &amp; Brand</h4>
+      <ul class="ftr-links">
+        <li><a href="brandkit.html">Design System &amp; Brandkit</a></li>
+        <li><a href="about.html#governance">Client Ownership Charter</a></li>
+        <li><a href="pricing.html#comparison">Feature Comparison Matrix</a></li>
+        <li><a href="contact.html#faq">Studio FAQs</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="w ftr-bottom">
+    <div>© 2026 AVIRON Studio. All Rights Reserved. 100% True Client Code Ownership.</div>
+    <div style="display:flex;gap:16px">
+      <a href="pricing.html">Pricing Plan</a>
+      <a href="brandkit.html">Brandkit</a>
+      <a href="contact.html">Support</a>
+    </div>
+  </div>
+</footer>
+
+<!-- GSAP 3.12.5 & ScrollTrigger for Scroll Animations -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

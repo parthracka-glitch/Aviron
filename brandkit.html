@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Brandkit &amp; Design System – AVIRON</title>
+<meta name="description" content="Official AVIRON visual identity guidelines, design tokens, interactive color palette, typography hierarchy, and vector assets.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- SVG Symbol Sprite -->
+<svg width="0" height="0" style="position:absolute;display:none">
+<defs>
+  <linearGradient id="gd" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#d4a85a"/><stop offset="1" stop-color="#946a24"/></linearGradient>
+</defs>
+<symbol id="arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+<symbol id="copy" viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></symbol>
+<symbol id="check" viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></symbol>
+<symbol id="chevron" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol>
+<symbol id="logo" viewBox="0 0 40 40"><path d="M20 3 3 37h7l10-22 10 22h7z" fill="url(#gd)" stroke="none"/><path d="M14 28h12" stroke="#fcfaf6" stroke-width="2.4"/></symbol>
+</svg>
+
+<!-- Header -->
+<header class="hdr" id="site-header">
+  <div class="w">
+    <a href="index.html" class="logo" aria-label="AVIRON Home">
+      <svg class="i logo-icon"><use href="#logo"/></svg>
+      <span class="logo-text"><b>AVIRON</b></span>
+    </a>
+    
+    <nav class="nav" id="main-nav" aria-label="Main Navigation">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="services.html" class="nav-link">Services</a>
+      <a href="pricing.html" class="nav-link">Pricing</a>
+      <a href="about.html" class="nav-link">About</a>
+      <a href="brandkit.html" class="nav-link on">Brandkit</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+    </nav>
+
+    <div class="hr">
+      <a href="contact.html" class="btn f sm magnetic">Get a Quote</a>
+      <button class="burger" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span class="burger-bar"></span>
+        <span class="burger-bar"></span>
+        <span class="burger-bar"></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <!-- Page Header -->
+  <section class="page-intro sec">
+    <div class="w">
+      <span class="eb">Design System &amp; Brandkit</span>
+      <div class="mask-heading">
+        <h1 style="font-size:42px;margin:10px 0 14px">The AVIRON Visual Identity &amp; Token Architecture</h1>
+      </div>
+      <p style="max-width:700px;font-size:15px;color:var(--mut)">Engineered with mathematical precision. Explore our sacred geometry logo, interactive color tokens, typography scale, and brand assets for AVIRON.</p>
+    </div>
+  </section>
+
+  <!-- Brandkit Grid Section -->
+  <section class="sec beige" style="padding-top:20px">
+    <div class="w">
+      <div class="brandkit-grid">
+        <!-- Card 1: Logo & Sacred Geometry -->
+        <div class="bk-card bk-logo-card reveal-tilt delay-1">
+          <div class="bk-card-header">
+            <span class="bk-tag">01 / LOGO IDENTITY</span>
+            <h4>The Monogram</h4>
+          </div>
+          <div class="bk-logo-preview">
+            <div class="bk-logo-backdrop">
+              <svg class="bk-logo-svg" viewBox="0 0 40 40"><use href="#logo"/></svg>
+              <div class="bk-grid-lines"></div>
+            </div>
+            <div class="bk-logo-meta">
+              <b>AVIRON DELTA-CREST</b>
+              <p>Geometric synthesis of the ascending Delta (velocity &amp; growth) with an architectural Roman pillar (stability &amp; trust).</p>
+              <div class="bk-btn-group">
+                <button class="btn sm" id="copy-logo-btn" title="Copy SVG Code to Clipboard">
+                  <svg class="i"><use href="#copy"/></svg>
+                  <span>Copy SVG Mark</span>
+                </button>
+                <button class="btn sm" id="copy-brand-guidelines-btn" title="Copy Brand System Overview">
+                  <svg class="i"><use href="#check"/></svg>
+                  <span>Copy Brandkit Specs</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2: Color Palette with Click-to-Copy HEX -->
+        <div class="bk-card bk-colors-card reveal-tilt delay-2">
+          <div class="bk-card-header">
+            <span class="bk-tag">02 / COLOR TOKENS</span>
+            <h4>Official Palette (Click to Copy HEX)</h4>
+          </div>
+          <div class="swatches-grid">
+            <div class="swatch" data-hex="#141210" style="--swatch-color:#141210;--swatch-text:#ffffff" title="Click to copy #141210">
+              <div class="swatch-preview"></div>
+              <div class="swatch-info">
+                <b>AVIRON Noir</b>
+                <code>#141210</code>
+                <small>Primary Deep Obsidian</small>
+              </div>
+            </div>
+            <div class="swatch" data-hex="#B28334" style="--swatch-color:#b28334;--swatch-text:#ffffff" title="Click to copy #B28334">
+              <div class="swatch-preview"></div>
+              <div class="swatch-info">
+                <b>Champagne Gold</b>
+                <code>#B28334</code>
+                <small>Signature Metallic Accent</small>
+              </div>
+            </div>
+            <div class="swatch" data-hex="#D9AD5C" style="--swatch-color:#d9ad5c;--swatch-text:#141210" title="Click to copy #D9AD5C">
+              <div class="swatch-preview"></div>
+              <div class="swatch-info">
+                <b>Gold Glow</b>
+                <code>#D9AD5C</code>
+                <small>Hover Glow &amp; Highlights</small>
+              </div>
+            </div>
+            <div class="swatch" data-hex="#FDFBF7" style="--swatch-color:#fdfbf7;--swatch-text:#141210" title="Click to copy #FDFBF7">
+              <div class="swatch-preview"></div>
+              <div class="swatch-info">
+                <b>Warm Alabaster</b>
+                <code>#FDFBF7</code>
+                <small>Clean Canvas Background</small>
+              </div>
+            </div>
+            <div class="swatch" data-hex="#F4EEE4" style="--swatch-color:#f4eee4;--swatch-text:#141210" title="Click to copy #F4EEE4">
+              <div class="swatch-preview"></div>
+              <div class="swatch-info">
+                <b>Oatmeal Sand</b>
+                <code>#F4EEE4</code>
+                <small>Secondary Surface &amp; Pill</small>
+              </div>
+            </div>
+            <div class="swatch" data-hex="#686157" style="--swatch-color:#686157;--swatch-text:#ffffff" title="Click to copy #686157">
+              <div class="swatch-preview"></div>
+              <div class="swatch-info">
+                <b>Muted Slate</b>
+                <code>#686157</code>
+                <small>Editorial &amp; Metadata Text</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3: Typography System -->
+        <div class="bk-card bk-type-card">
+          <div class="bk-card-header">
+            <span class="bk-tag">03 / TYPOGRAPHY TOKENS</span>
+            <h4>Font Scale &amp; Pairings</h4>
+          </div>
+          <div class="type-specimens">
+            <div class="type-row">
+              <div class="type-label">Display &amp; Headers<br><small>Plus Jakarta Sans (600/700)</small></div>
+              <div class="type-sample display-font">Aa Bb Gg 123 — Modern Digital Velocity</div>
+            </div>
+            <div class="type-row">
+              <div class="type-label">Editorial Accent<br><small>Cormorant Garamond (500/600)</small></div>
+              <div class="type-sample serif-font">Aa Bb Gg 123 — Timeless Architectural Craftsmanship</div>
+            </div>
+            <div class="type-row">
+              <div class="type-label">Interface &amp; Body<br><small>Inter (400/500/600)</small></div>
+              <div class="type-sample sans-font">Engineered for razor-sharp legibility across high-DPI displays.</div>
+            </div>
+            <div class="type-row">
+              <div class="type-label">Code &amp; Metrics<br><small>JetBrains Mono (500)</small></div>
+              <div class="type-sample mono-font">START_AT_₹9000 // 99.9%_UPTIME // 3_TO_7_DAYS</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 4: Startup Design Principles -->
+        <div class="bk-card bk-pillars-card">
+          <div class="bk-card-header">
+            <span class="bk-tag">04 / CORE BRAND PILLARS</span>
+            <h4>Engineering Manifesto</h4>
+          </div>
+          <div class="bk-pillars-list">
+            <div class="bk-pillar-item">
+              <span class="bk-num">01</span>
+              <div>
+                <b>Zero Agency Lock-In</b>
+                <p>Clients own 100% of the code, domain, git repo, and hosting. No hostage situations.</p>
+              </div>
+            </div>
+            <div class="bk-pillar-item">
+              <span class="bk-num">02</span>
+              <div>
+                <b>Fixed Transparent Packages</b>
+                <p>Predictable pricing starting at ₹9,000 with milestone deposit protections and zero surprise invoices.</p>
+              </div>
+            </div>
+            <div class="bk-pillar-item">
+              <span class="bk-num">03</span>
+              <div>
+                <b>Velocity by Default</b>
+                <p>3 to 7-day sprint releases with built-in Google Business setup and sticky WhatsApp lead drivers.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- Footer -->
+<footer class="ftr">
+  <div class="w ftr-grid">
+    <div>
+      <div class="logo ftr-logo">
+        <svg class="i logo-icon"><use href="#logo"/></svg>
+        <span class="logo-text"><b>AVIRON</b></span>
+      </div>
+      <p class="ftr-about">High-velocity web development, 3D WebGL experiences, cinema video production, and editorial photo retouching for enterprises in India and worldwide.</p>
+      <div class="ftr-meta">Pune, Maharashtra, India · Serving Globally</div>
+    </div>
+    
+    <div>
+      <h4>Navigation</h4>
+      <ul class="ftr-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services &amp; Solutions</a></li>
+        <li><a href="pricing.html">Packages &amp; Pricing</a></li>
+        <li><a href="about.html">About &amp; Roadmap</a></li>
+        <li><a href="contact.html">Contact &amp; Quote</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h4>Packages</h4>
+      <ul class="ftr-links">
+        <li><a href="pricing.html#card-starter">Starter – ₹9,000</a></li>
+        <li><a href="pricing.html#card-standard">Standard – ₹15,000</a></li>
+        <li><a href="pricing.html#card-advanced">Advanced – ₹30,000</a></li>
+        <li><a href="pricing.html#card-premium">Premium – ₹45,000</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h4>Engineering &amp; Brand</h4>
+      <ul class="ftr-links">
+        <li><a href="brandkit.html">Design System &amp; Brandkit</a></li>
+        <li><a href="about.html#governance">Client Ownership Charter</a></li>
+        <li><a href="pricing.html#comparison">Feature Comparison Matrix</a></li>
+        <li><a href="contact.html#faq">Studio FAQs</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="w ftr-bottom">
+    <div>© 2026 AVIRON Studio. All Rights Reserved. 100% True Client Code Ownership.</div>
+    <div style="display:flex;gap:16px">
+      <a href="pricing.html">Pricing Plan</a>
+      <a href="brandkit.html">Brandkit</a>
+      <a href="contact.html">Support</a>
+    </div>
+  </div>
+</footer>
+
+<!-- GSAP 3.12.5 & ScrollTrigger for Scroll Animations -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

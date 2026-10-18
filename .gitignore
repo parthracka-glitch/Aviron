@@ -1,0 +1,14 @@
+# Operating System Files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+
+# Editor & IDE Directories
+.vscode/
+.idea/
+
+# Local Environment & Logs
+*.log
+
+# Duplicate local build scratch
+aviron-website/
