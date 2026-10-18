@@ -43,10 +43,34 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:700;color:var(--ink);let
 .hdr{position:sticky;top:0;z-index:100;background:rgba(252,250,246,0.92);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line);transition:box-shadow .2s ease,background .2s ease}
 .hdr.sc{box-shadow:0 2px 14px rgba(42,38,34,0.06);background:#fff}
 .hdr .w{display:flex;align-items:center;justify-content:space-between;height:62px}
-.logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;transition:transform .25s ease}
+.logo:hover{transform:scale(1.02)}
 .logo>.i{width:32px;height:32px;transition:transform .2s ease}
 .logo:hover>.i{transform:scale(1.05)}
 .logo b{font-size:22px;letter-spacing:.16em;line-height:1;color:var(--ink)}
+
+/* Authentic AVIRON 3D Metallic Gold Logo System */
+.site-logo-img{
+  height:28px;
+  width:auto;
+  max-width:140px;
+  object-fit:contain;
+  display:block;
+  filter:drop-shadow(0 2px 8px rgba(181,138,58,0.22));
+  transition:filter .3s ease;
+}
+.logo:hover .site-logo-img{
+  filter:drop-shadow(0 3px 14px rgba(212,168,90,0.48));
+}
+.ftr-logo-img{
+  height:32px;
+  width:auto;
+  max-width:160px;
+  object-fit:contain;
+  display:block;
+  filter:drop-shadow(0 3px 14px rgba(212,168,90,0.35));
+}
+
 
 .nav{display:flex;align-items:center;gap:28px}
 .nav-link{font-size:13px;font-weight:500;color:var(--mut);text-decoration:none;transition:color .2s ease;padding:6px 0;position:relative}
