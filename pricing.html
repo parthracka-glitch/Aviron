@@ -79,7 +79,24 @@
         </div>
       </div>
 
-      <div class="pkg-grid">
+      <!-- Packages Carousel Container -->
+      <div class="pkg-carousel-container" data-pkg-carousel>
+        <div class="pkg-carousel-ctrls">
+          <div class="pkg-swipe-hint">
+            <svg class="i"><use href="#arrow"/></svg>
+            <span>Swipe or use arrows to view packages</span>
+          </div>
+          <div class="pkg-arrow-btns">
+            <button class="pkg-arrow-btn prev" aria-label="Previous package" type="button">
+              <svg class="i" style="width:13px;height:13px;transform:rotate(180deg)"><use href="#arrow"/></svg>
+            </button>
+            <button class="pkg-arrow-btn next" aria-label="Next package" type="button">
+              <svg class="i" style="width:13px;height:13px"><use href="#arrow"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <div class="pkg-grid">
         <!-- Starter Package -->
         <div class="pkg-card reveal-scale delay-1" id="card-starter">
           <div class="pkg-header">
@@ -226,6 +243,13 @@
             <a href="contact.html?plan=Premium" class="btn f block magnetic">Choose Premium</a>
             <a class="btn sm block wa-plan-btn magnetic" href="https://wa.me/919876543210?text=Hello%20AVIRON!%20I%20am%20interested%20in%20the%20Premium%20Package%20(₹45,000)." target="_blank" rel="noopener">Chat on WhatsApp</a>
           </div>
+        </div>
+        
+        <div class="pkg-carousel-nav" role="tablist" aria-label="Select package">
+          <button class="pkg-nav-chip active" data-index="0" type="button">Starter (₹9k)</button>
+          <button class="pkg-nav-chip" data-index="1" type="button">Standard (₹15k)</button>
+          <button class="pkg-nav-chip" data-index="2" type="button">★ Advanced (₹30k)</button>
+          <button class="pkg-nav-chip" data-index="3" type="button">Premium (₹45k)</button>
         </div>
       </div>
     </div>

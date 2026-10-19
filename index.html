@@ -269,8 +269,24 @@
         </div>
       </div>
 
-      <!-- 4 Compact Pricing Cards with Staggered Depth Scale -->
-      <div class="pkg-grid" style="margin-bottom:28px">
+      <!-- 4 Compact Pricing Cards with Carousel Format -->
+      <div class="pkg-carousel-container" data-pkg-carousel>
+        <div class="pkg-carousel-ctrls">
+          <div class="pkg-swipe-hint">
+            <svg class="i"><use href="#arrow"/></svg>
+            <span>Swipe or use arrows to view packages</span>
+          </div>
+          <div class="pkg-arrow-btns">
+            <button class="pkg-arrow-btn prev" aria-label="Previous package" type="button">
+              <svg class="i" style="width:13px;height:13px;transform:rotate(180deg)"><use href="#arrow"/></svg>
+            </button>
+            <button class="pkg-arrow-btn next" aria-label="Next package" type="button">
+              <svg class="i" style="width:13px;height:13px"><use href="#arrow"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <div class="pkg-grid">
         <!-- Starter Card -->
         <div class="pkg-card reveal-scale delay-1" data-reveal id="card-starter">
           <div class="pkg-header">
@@ -390,6 +406,13 @@
           <div class="pkg-actions">
             <a href="contact.html" class="btn f block magnetic">Select Premium</a>
           </div>
+        </div>
+        
+        <div class="pkg-carousel-nav" role="tablist" aria-label="Select package">
+          <button class="pkg-nav-chip active" data-index="0" type="button">Starter (₹9k)</button>
+          <button class="pkg-nav-chip" data-index="1" type="button">Standard (₹15k)</button>
+          <button class="pkg-nav-chip" data-index="2" type="button">★ Advanced (₹30k)</button>
+          <button class="pkg-nav-chip" data-index="3" type="button">Premium (₹45k)</button>
         </div>
       </div>
 

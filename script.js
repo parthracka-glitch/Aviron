@@ -108,25 +108,33 @@ const inrPrices=$$('.price-inr');
 const usdPrices=$$('.price-usd');
 
 function setCurrency(curr){
+  const setAdv = (sel, txt) => { const el = $(sel); if (el) el.textContent = txt; };
   if(curr==='USD'){
-    btnUsd.classList.add('active');
-    btnInr.classList.remove('active');
+    if (btnUsd) btnUsd.classList.add('active');
+    if (btnInr) btnInr.classList.remove('active');
     inrPrices.forEach(el=>el.style.display='none');
     usdPrices.forEach(el=>el.style.display='block');
-    // Update advance text in USD
-    $('#card-starter .adv-val').textContent='$150 (50%)';
-    $('#card-standard .adv-val').textContent='$250 (50%)';
-    $('#card-advanced .adv-val').textContent='$360 (40%)';
-    $('#card-premium .adv-val').textContent='$560 (40%)';
+    setAdv('#card-starter .adv-val', '$150 (50%)');
+    setAdv('#card-standard .adv-val', '$250 (50%)');
+    setAdv('#card-advanced .adv-val', '$360 (40%)');
+    setAdv('#card-premium .adv-val', '$560 (40%)');
+    $$('.pkg-nav-chip[data-index="0"]').forEach(el => el.textContent = 'Starter ($300)');
+    $$('.pkg-nav-chip[data-index="1"]').forEach(el => el.textContent = 'Standard ($500)');
+    $$('.pkg-nav-chip[data-index="2"]').forEach(el => el.textContent = '★ Advanced ($900)');
+    $$('.pkg-nav-chip[data-index="3"]').forEach(el => el.textContent = 'Premium ($1,400)');
   } else {
-    btnInr.classList.add('active');
-    btnUsd.classList.remove('active');
+    if (btnInr) btnInr.classList.add('active');
+    if (btnUsd) btnUsd.classList.remove('active');
     inrPrices.forEach(el=>el.style.display='block');
     usdPrices.forEach(el=>el.style.display='none');
-    $('#card-starter .adv-val').textContent='₹4,500 (50%)';
-    $('#card-standard .adv-val').textContent='₹7,500 (50%)';
-    $('#card-advanced .adv-val').textContent='₹12,000 (40%)';
-    $('#card-premium .adv-val').textContent='₹18,000 (40%)';
+    setAdv('#card-starter .adv-val', '₹4,500 (50%)');
+    setAdv('#card-standard .adv-val', '₹7,500 (50%)');
+    setAdv('#card-advanced .adv-val', '₹12,000 (40%)');
+    setAdv('#card-premium .adv-val', '₹18,000 (40%)');
+    $$('.pkg-nav-chip[data-index="0"]').forEach(el => el.textContent = 'Starter (₹9k)');
+    $$('.pkg-nav-chip[data-index="1"]').forEach(el => el.textContent = 'Standard (₹15k)');
+    $$('.pkg-nav-chip[data-index="2"]').forEach(el => el.textContent = '★ Advanced (₹30k)');
+    $$('.pkg-nav-chip[data-index="3"]').forEach(el => el.textContent = 'Premium (₹45k)');
   }
 }
 
@@ -220,6 +228,68 @@ if (matrixWrap && matrixTierBtns.length) {
     }
   }, { passive: true });
 }
+
+// Package Carousel Controls & Dot Navigation
+function initPackageCarousels() {
+  const containers = $$('[data-pkg-carousel]');
+  containers.forEach(container => {
+    const track = container.querySelector('.pkg-grid');
+    if (!track) return;
+    const cards = [...track.querySelectorAll('.pkg-card')];
+    const prevBtn = container.querySelector('.pkg-arrow-btn.prev');
+    const nextBtn = container.querySelector('.pkg-arrow-btn.next');
+    const navChips = [...container.querySelectorAll('.pkg-nav-chip')];
+
+    if (!cards.length) return;
+
+    if (prevBtn) {
+      prevBtn.onclick = () => {
+        const cardWidth = cards[0].offsetWidth + 18;
+        track.scrollBy({ left: -cardWidth, behavior: 'smooth' });
+      };
+    }
+    if (nextBtn) {
+      nextBtn.onclick = () => {
+        const cardWidth = cards[0].offsetWidth + 18;
+        track.scrollBy({ left: cardWidth, behavior: 'smooth' });
+      };
+    }
+
+    navChips.forEach((chip, idx) => {
+      chip.onclick = () => {
+        if (cards[idx]) {
+          const targetLeft = cards[idx].offsetLeft - track.offsetLeft - (track.offsetWidth - cards[idx].offsetWidth) / 2;
+          track.scrollTo({ left: Math.max(0, targetLeft), behavior: 'smooth' });
+        }
+      };
+    });
+
+    let scrollTimeout;
+    track.addEventListener('scroll', () => {
+      clearTimeout(scrollTimeout);
+      scrollTimeout = setTimeout(() => {
+        const trackCenter = track.scrollLeft + track.offsetWidth / 2;
+        let closestIdx = 0;
+        let minDistance = Infinity;
+
+        cards.forEach((card, idx) => {
+          const cardCenter = card.offsetLeft + card.offsetWidth / 2;
+          const distance = Math.abs(trackCenter - cardCenter);
+          if (distance < minDistance) {
+            minDistance = distance;
+            closestIdx = idx;
+          }
+        });
+
+        navChips.forEach((chip, idx) => {
+          chip.classList.toggle('active', idx === closestIdx);
+        });
+      }, 50);
+    }, { passive: true });
+  });
+}
+
+initPackageCarousels();
 
 // FAQ Accordion
 $$('.faq-q').forEach(qBtn=>{
