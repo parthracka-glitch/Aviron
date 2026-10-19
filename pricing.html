@@ -235,12 +235,28 @@
   <section class="sec">
     <div class="w">
       <div class="comp-matrix-sec" id="comparison">
-        <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;margin-bottom:18px">
+        <div class="comp-matrix-hdr">
           <div>
+            <span class="eb" style="font-size:10.5px">Official Scope Audit</span>
             <h3>Detailed Feature Comparison Matrix</h3>
             <p>Direct item-by-item breakdown from our official pricing plan.</p>
           </div>
           <a href="contact.html" class="btn sm">Request Custom Feature Scope</a>
+        </div>
+
+        <!-- Mobile Quick Tier Switcher & Swipe Hint -->
+        <div class="matrix-mobile-bar">
+          <div class="matrix-swipe-hint">
+            <svg class="i" style="width:13px;height:13px"><use href="#arrow"/></svg>
+            <span>Swipe horizontally or tap a tier below</span>
+          </div>
+          <div class="matrix-tier-tabs" role="tablist" aria-label="Compare tiers">
+            <button class="matrix-tier-btn active" data-col="all" type="button">All 4 Tiers</button>
+            <button class="matrix-tier-btn" data-col="1" type="button">Starter (₹9k)</button>
+            <button class="matrix-tier-btn" data-col="2" type="button">Standard (₹15k)</button>
+            <button class="matrix-tier-btn" data-col="3" type="button">★ Advanced (₹30k)</button>
+            <button class="matrix-tier-btn" data-col="4" type="button">Premium (₹45k)</button>
+          </div>
         </div>
 
         <div class="table-wrap">
@@ -250,7 +266,7 @@
                 <th class="th-feat">Feature / Deliverable</th>
                 <th>Starter (₹9k)</th>
                 <th>Standard (₹15k)</th>
-                <th>Advanced (₹30k)</th>
+                <th class="th-featured">Advanced (₹30k) <span class="th-badge">Core</span></th>
                 <th>Premium (₹45k)</th>
               </tr>
             </thead>

@@ -181,8 +181,45 @@ bizTabs.forEach(tab=>{
     tab.classList.add('active');
     const target=$(`#biz-${tab.dataset.biz}`);
     if(target) target.classList.add('active');
+    // Mobile touch auto-scroll active tab into view
+    tab.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
   };
 });
+
+// Mobile Comparison Matrix Tier Navigation
+const matrixWrap = $('.table-wrap');
+const matrixTierBtns = $$('.matrix-tier-btn');
+if (matrixWrap && matrixTierBtns.length) {
+  matrixTierBtns.forEach(btn => {
+    btn.onclick = () => {
+      matrixTierBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const colIdx = btn.dataset.col;
+
+      if (colIdx === 'all') {
+        matrixWrap.scrollTo({ left: 0, behavior: 'smooth' });
+        $$('.comp-tbl th, .comp-tbl td').forEach(el => el.classList.remove('col-focus'));
+      } else {
+        const colNum = parseInt(colIdx) + 1;
+        const targetHeader = $(`.comp-tbl th:nth-child(${colNum})`);
+        if (targetHeader) {
+          const stickyWidth = ($('.th-feat')?.offsetWidth || 135);
+          const targetLeft = targetHeader.offsetLeft - stickyWidth - 8;
+          matrixWrap.scrollTo({ left: Math.max(0, targetLeft), behavior: 'smooth' });
+        }
+        $$('.comp-tbl th, .comp-tbl td').forEach(el => el.classList.remove('col-focus'));
+        $$(`.comp-tbl tr > *:nth-child(${colNum})`).forEach(el => el.classList.add('col-focus'));
+      }
+    };
+  });
+
+  matrixWrap.addEventListener('scroll', () => {
+    if (matrixWrap.scrollLeft < 30) {
+      matrixTierBtns.forEach(b => b.classList.toggle('active', b.dataset.col === 'all'));
+      $$('.comp-tbl th, .comp-tbl td').forEach(el => el.classList.remove('col-focus'));
+    }
+  }, { passive: true });
+}
 
 // FAQ Accordion
 $$('.faq-q').forEach(qBtn=>{
